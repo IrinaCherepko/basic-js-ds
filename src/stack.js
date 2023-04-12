@@ -30,7 +30,7 @@ class Stack {
     if (this.array.length==0) { 
       return undefined
     } else {
-      return this.array.pop() 
+      return this.array.pop();  
     }
     
   }
@@ -39,18 +39,11 @@ class Stack {
     if (this.array.length==0) {
       throw new NotImplementedError('Not implemented');
     }
-
-    return this.array[0];
+    return this.array[this.array.length - 1];
   }
 }
 
-module.exports = { 
+module.exports = {  
   Stack
 };
 
-const stack = new Stack();
-
-stack.push(1)
-stack.peek()
-stack.pop()
-stack.pop()
